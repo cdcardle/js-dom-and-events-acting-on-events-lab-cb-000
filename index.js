@@ -28,7 +28,7 @@ function addNewLiOnClick() {
 
 function clearEmployeeListOnLinkClick() {
   function clearList() {
-    ul.children.remove();
+    ul.children().remove();
   }
   return d.addEventListener('click', clearList());
 }
