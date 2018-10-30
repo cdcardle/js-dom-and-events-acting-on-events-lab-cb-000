@@ -7,6 +7,7 @@ function preventRefreshOnSubmit(){
 preventRefreshOnSubmit()
 
 let input = document.querySelector('input');
+let ul = document.querySelector('ul');
 
 function retrieveEmployeeInformation() {
   return input.value;
@@ -16,7 +17,7 @@ function addNewElementAsLi() {
   let input = retrieveEmployeeInformation();
   let li = document.createElement('li');
   li.appendChild(document.createTextNode(input));
-  document.querySelector('ul').appendChild(li);
+  ul.appendChild(li);
 }
 
 function addNewLiOnClick() {
@@ -25,8 +26,8 @@ function addNewLiOnClick() {
 }
 
 function clearEmployeeListOnLinkClick() {
-  // function clearList() {
-  //   document.querySelector('ul').clear;
-  // }
-  // document.addEventListener('click', clearList())
+  function clearList() {
+    ul.remove();
+  }
+  document.addEventListener('click', clearList())
 }
