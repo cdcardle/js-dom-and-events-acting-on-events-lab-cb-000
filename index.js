@@ -21,7 +21,7 @@ function addNewElementAsLi() {
 
 function addNewLiOnClick() {
   document.addEventListener('click', addNewElementAsLi());
-  input.value = "";
+  input.value = "r";
 }
 
 function clearEmployeeListOnLinkClick() {
