@@ -1,13 +1,14 @@
 function preventRefreshOnSubmit(){
-    document.querySelector('form').addEventListener('submit', function(event){
+    d.querySelector('form').addEventListener('submit', function(event){
       event.preventDefault()
     })
 }
 
 preventRefreshOnSubmit()
 
-let input = document.querySelector('input');
-let ul = document.querySelector('ul');
+let d = document;
+let input = d.querySelector('input');
+let ul = d.querySelector('ul');
 
 function retrieveEmployeeInformation() {
   return input.value;
@@ -15,13 +16,13 @@ function retrieveEmployeeInformation() {
 
 function addNewElementAsLi() {
   let input = retrieveEmployeeInformation();
-  let li = document.createElement('li');
-  li.appendChild(document.createTextNode(input));
+  let li = d.createElement('li');
+  li.appendChild(d.createTextNode(input));
   ul.appendChild(li);
 }
 
 function addNewLiOnClick() {
-  document.addEventListener('click', addNewElementAsLi());
+  d.addEventListener('click', addNewElementAsLi());
   input.value = "";
 }
 
@@ -29,5 +30,5 @@ function clearEmployeeListOnLinkClick() {
   function clearList() {
     ul.remove();
   }
-  document.addEventListener('click', clearList())
+  d.addEventListener('click', clearList())
 }
