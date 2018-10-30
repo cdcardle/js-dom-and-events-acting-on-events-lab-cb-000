@@ -6,7 +6,7 @@ function preventRefreshOnSubmit(){
 
 preventRefreshOnSubmit()
 
-let input = document.querySelector('input');
+let input = document.querySelector('input[name="name"]');
 let ul = document.querySelector('.employee-list');
 
 function retrieveEmployeeInformation() {
@@ -24,7 +24,7 @@ function addNewLiOnClick() {
   let submit = document.querySelector('input[type="submit"]')
   submit.addEventListener("click", () => {
     addNewElementAsLi();
-    document.querySelector("input[name='name']").value = ''
+    input.value = ''
   });
 }
 
