@@ -21,3 +21,10 @@ function addNewLiOnClick() {
   document.addEventListener('click', addNewElementAsLi());
   input.value = "";
 }
+
+function clearEmployeeListOnLinkClick() {
+  function clearList() {
+    document.querySelector('ul').clear;
+  }
+  document.addEventListener('click', clearList();)
+}
