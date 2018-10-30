@@ -6,13 +6,11 @@ function preventRefreshOnSubmit(){
 
 preventRefreshOnSubmit()
 
-let d = document;
-
 function retrieveEmployeeInformation() {
-  return d.querySelector('input').value;
+  return document.querySelector('input').value;
 }
 
 function addNewElementAsLi() {
   let input = retrieveEmployeeInformation();
-  return d.querySelector('li').append(input);
+  return document.querySelector('ul').append(`<li>${input}</li>`);
 }
