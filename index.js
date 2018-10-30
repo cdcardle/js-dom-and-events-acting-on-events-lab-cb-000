@@ -27,9 +27,10 @@ function addNewLiOnClick() {
 
 function clearEmployeeListOnLinkClick() {
   function clearList() {
-    for (let i = 0; i < ul.length; i++) {
-      ul[i].remove();
-    }
+    let lis = ul.getElementsByTagName('li');
+    for (i = 0; i < lis.length; i++) {
+      lis[i].remove();
+  }
   }
   return document.addEventListener('click', clearList());
 }
